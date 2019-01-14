@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/InputController.cs">
+    <Files>
+      <File FileName="../FRC-2016-Camera-master/Camera2016/Camera2016/ImageGrabber.cs" Line="1" Column="1" />
+      <File FileName="Assets/InputController.cs" Line="35" Column="73" />
+      <File FileName="Assets/RobotController.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

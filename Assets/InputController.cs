@@ -7,7 +7,7 @@ public class InputController : MonoBehaviour
 	public RobotController robot;
 	public float powerChangeSpeed;
 	public bool tankDrive;
-	
+	public bool shiftUp;
 	public Rect guiRect;
 	
 	void OnGUI()
@@ -22,11 +22,21 @@ public class InputController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		float shift = Input.GetAxis (playerPrefix + " Shift");
+		if (shift > 0)
+			robot.SetGripper(false);
+		else if (shift < 0)
+			robot.SetGripper(true);
 		float leftPower, rightPower;
 		if (tankDrive)
 		{
-			leftPower = Input.GetAxis(playerPrefix + " Left");
-			rightPower = Input.GetAxis(playerPrefix + " Right");
+			if(!shiftUp){
+				leftPower = (float) (Input.GetAxis(playerPrefix + " Left") * 1.3);
+				rightPower = (float) (Input.GetAxis(playerPrefix + " Right") * 1.3);
+			} else {
+				leftPower = (float) (Input.GetAxis(playerPrefix + " Left") * .6);
+				rightPower = (float) (Input.GetAxis(playerPrefix + " Right") * .6);
+			}
 		}
 		else
 		{

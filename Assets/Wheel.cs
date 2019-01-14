@@ -16,9 +16,9 @@ public class Wheel : MonoBehaviour
 		float targetVel = speed;
 		
 		// set joint motor parameters
-		JointMotor myMotor = hingeJoint.motor;
+		JointMotor myMotor = GetComponent<HingeJoint>().motor;
 		myMotor.targetVelocity = targetVel;
-		hingeJoint.motor = myMotor;
+		GetComponent<HingeJoint>().motor = myMotor;
 		
 		transform.localPosition = neutralPosition;
 	}
